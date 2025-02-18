@@ -1,0 +1,72 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #ffffff; /* Fondo negro */
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre las partículas */
+}
+
+.title {
+    font-size: 4rem;
+    margin: 0;
+    animation: float 3s ease-in-out infinite;
+    color: #1e3c72; /* Azul marino para el título */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    color: #2a5298; /* Azul marino más claro para el subtítulo */
+}
+
+/* Efecto de cursor */
+.cursor-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(30, 60, 114, 0.7); /* Azul marino con transparencia */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out, background 0.3s ease;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1; /* Para que esté detrás del contenido */
+}
+#webCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Detrás del contenido pero sobre las partículas */
+    pointer-events: none;
+}
+
+/* Animación flotante */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
