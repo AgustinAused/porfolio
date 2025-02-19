@@ -13,6 +13,7 @@ body {
     color: #fff;
     line-height: 1.6;
 }
+
 canvas {
     position: fixed;
     top: 0;
@@ -23,18 +24,18 @@ canvas {
     z-index: -1;
 }
 
+/* Navbar vertical e interactivo */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    font-size: x-large;
     height: 100vh;
-    width: 200px;
+    width: 80px;
     background-color: #16213e;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding-top: 2rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -43,15 +44,21 @@ canvas {
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -81,7 +88,7 @@ p {
 }
 
 section {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin: 2rem 0;
     padding: 2rem;
@@ -109,6 +116,7 @@ section {
     text-decoration: underline;
     color: #a29bfe;
 }
+
 .timeline {
     position: relative;
     margin: 2rem auto;
@@ -133,8 +141,6 @@ section {
 .timeline-item .content {
     position: relative;
     padding: 1rem;
-    /* border-radius: 8px */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .timeline-item .content h3 {
@@ -165,14 +171,11 @@ section {
     transform: translateY(-50%);
 }
 
-
 .skills-list {
     margin-top: 10px;
     color: #dcdde1;
     font-size: 0.9rem;
 }
-
-
 
 .projects-container {
     display: flex;
@@ -214,6 +217,7 @@ section {
     margin: 0 1rem 1rem;
     color: #dcdde1;
 }
+
 .project-card button {
     margin: 1rem;
     padding: 0.5rem 1rem;
@@ -229,8 +233,10 @@ section {
     background-color: #8445e9;
 }
 
+/* Skill Section */
+
 .skills-section {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin: 2rem auto;
     padding: 2rem;
@@ -260,7 +266,6 @@ section {
     padding: 1rem;
     border-radius: 8px;
     transition: transform 0.3s;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .skill-card:hover {
@@ -278,35 +283,49 @@ section {
     color: #dcdde1;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
+/* Contact Section */
+.contact-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #16213e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.form-input {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
+.contact-section h2 {
+    font-size: 2rem;
+    color: #a29bfe;
+    margin-bottom: 1.5rem;
 }
 
-.submit-btn {
-    padding: 0.75rem;
-    background-color: #e94560;
+.contact-icons a {
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
 }
 
-.submit-btn:hover {
-    background-color: #a53860;
+.contact-icons a:hover {
+    color: #a29bfe;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        position: relative;
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 1rem;
     }
 
     .project-card {
@@ -315,7 +334,7 @@ section {
     }
 
     .timeline::before {
-        left: 32px;
+        left: 0px;
     }
 
     .timeline-item {
@@ -327,10 +346,13 @@ section {
     }
 }
 
-
 @media (max-width: 480px) {
     .project-card {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
     }
 }

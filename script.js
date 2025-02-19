@@ -61,7 +61,6 @@ const canvas = document.getElementById('particle-canvas');
             canvas.height = window.innerHeight;
         });
 
-        // Navbar active link on scroll
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -76,8 +75,8 @@ const canvas = document.getElementById('particle-canvas');
 
             navLinks.forEach(a => {
                 a.classList.remove('active');
-                // if (a.getAttribute('href').includes(current)) {
-                //     a.classList.add('active');
-                // }
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
             });
         });

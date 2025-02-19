@@ -19,70 +19,44 @@
     <!-- Particle Effect -->
     <canvas id="particle-canvas"></canvas>
     <!-- Navbar -->
-    <div>
-        <nav class="navbar">
-            <div class="nav-links">
-                <a href="#projects">Proyectos</a>
-                <a href="#skills">Skills</a>
-                <!-- <a href="#contact">Contacto</a> -->
-            </div>
-        </nav>
-    </div>
-    
-    <div>
-        
-    </div>
-    <header class="hero">
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#projects" title="Proyectos"><i class="fas fa-laptop-code"></i></a>
+            <a href="#experience" title="Experiencia"><i class="fas fa-briefcase"></i></a>
+            <a href="#skills" title="Skills"><i class="fas fa-code"></i></a>
+            <a href="#contact" title="Contacto"><i class="fas fa-envelope"></i></a>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="hero content">
         <h1>Agustin Aused</h1>
         <h2>Software Engineer</h2>
-        <p>
-            Apasionado de la tecnología, proactivo, con buena comunicación y siempre
-            dispuesto a afrontar nuevos desafíos profesionales y personales.
-        </p>
+        <p>Apasionado de la tecnología, proactivo y siempre listo para nuevos desafíos.</p>
     </header>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <h2>Proyectos Destacados</h2>
         <div class="projects-container">
-            <!-- Proyecto 1 -->
             <div class="project-card">
-                <img src="img\LearnHub-min.png" alt="LearnHub" class="project-image" />
                 <h3 class="project-title">LearnHub</h3>
-                <p class="project-description">
-                    Marketplace de servicios desarrollado con React y Node.js
-                </p>
-                <button onclick="window.open('https://github.com/AgustinAused/LearnHub', '_blank')">
-                    Ver en GitHub
-                </button>
+                <p class="project-description">Marketplace de servicios desarrollado con React y Node.js</p>
+                <button onclick="window.open('https://github.com/AgustinAused/LearnHub', '_blank')">Ver en GitHub</button>
             </div>
-
-            <!-- Proyecto 2 -->
             <div class="project-card">
-
                 <h3 class="project-title">Finance Api</h3>
-                <p class="project-description">
-                    Backend de una API REST para gestión de finanzas Empresariales
-                </p>
-                <button onclick="window.open('https://github.com/AgustinAused/Finance-Api', '_blank')">
-                    Ver en GitHub
-                </button>
+                <p class="project-description">Backend de una API REST para gestión de finanzas Empresariales</p>
+                <button onclick="window.open('https://github.com/AgustinAused/Finance-Api', '_blank')">Ver en GitHub</button>
             </div>
-
-            <!-- Proyecto 3 -->
             <div class="project-card">
                 <h3 class="project-title">Finance Dashboard</h3>
-                <p class="project-description">
-                    Dashboard de finanzas desarrollado con React y NextJS
-                </p>
-                <button onclick="window.open('https://github.com/AgustinAused/finance-dashboard', '_blank')">
-                    Ver en GitHub
-                </button>
+                <p class="project-description">Dashboard de finanzas desarrollado con React y NextJS</p>
+                <button onclick="window.open('https://github.com/AgustinAused/finance-dashboard', '_blank')">Ver en GitHub</button>
             </div>
         </div>
     </section>
     <!-- Timeline Section -->
-    <section>
+    <section id="Experiencia">
         <h2>Experiencia Laboral</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -178,28 +152,19 @@
         </div>
     </section>
 
-    <!-- Sección Contacto -->
-    <!-- <section id="contact" class="contact-section section-animation">
-        <div class="contact-container">
-            <form class="contact-form">
-                <h2>Contacto</h2>
-                <input type="text" class="form-input" placeholder="Nombre" />
-                <input type="email" class="form-input" placeholder="Email" />
-                <textarea class="form-input" rows="5" placeholder="Mensaje"></textarea>
-                <button type="submit" class="submit-btn">Enviar Mensaje</button>
-            </form>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/agustinaused" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AgustinAused" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:agus.aused@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-    </section> -->
+    </section>
+
     <!-- Footer -->
-    <div class="footer">
-        <div>
-            <a href="https://www.linkedin.com/in/agustinaused" target="_blank">LinkedIn</a>
-            <a href="https://github.com/AgustinAused" target="_blank">GitHub</a>
-            <a href="mailto:agus.aused@gmail.com" >Email</a>
-        </div>
-        <div>
-            <p>&copy; 2025 Agustín - Todos los derechos reservados</p>
-        </div>
+    <div class="footer content">
+        <p>&copy; 2025 Agustín - Todos los derechos reservados</p>
     </div>
     <script src="script.js"></script>
 </body>
