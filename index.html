@@ -1,60 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" itemscope itemtype="http://schema.org/Person">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio de Agustín Aused - Ingeniero de Software Full Stack especializado en Java, React y Mainframe. Experiencia en desarrollo web y soporte técnico de sistemas empresariales.">
+    <title>Agustín Aused | Ingeniero de Software Full Stack Java + React</title>
+    <meta name="keywords" content="Ingeniero de Software, Desarrollador Full Stack, Java, React, Mainframe, Desarrollo Web, MongoDB, Spring Boot, Soporte Técnico, Argentina">
+    <meta name="author" content="Agustin Aused" />
+    
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Agustín Aused">
+    <meta itemprop="description" content="Ingeniero de Software Full Stack especializado en Java y tecnologías modernas">
+    <meta itemprop="image" content="https://agusaused.com/img/og-image.jpg">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agusaused.com/">
+    <meta property="og:title" content="Agustín Aused | Ingeniero de Software Full Stack">
+    <meta property="og:description" content="Portafolio profesional con proyectos destacados en desarrollo web y experiencia en sistemas mainframe">
+    <meta property="og:image" content="https://agusaused.com/img/og-image.jpg">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Descubre el portafolio de Agustín Aused, Software Engineer con experiencia en Java, React, NoSQL y más. ¡Explora proyectos innovadores!">
-        <title> Agustín Aused - Portafolio </title>
-        <meta name="keywords" content="Software Engineer, Desarrollo Web, Java, React, MongoDB, Full Stack Developer, Mainframe Support, Mainframe">
-        <meta name="author" content="Agustin Aused" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="img/favicon.ico" />
-    </head>
+    <link rel="canonical" href="https://agusaused.com/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="img/favicon.ico" />
 </head>
 
 <body>
     <!-- Particle Effect -->
     <canvas id="particle-canvas"></canvas>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Navegación principal">
         <div class="nav-links">
-            <a href="#projects" title="Proyectos"><i class="fas fa-laptop-code"></i></a>
-            <a href="#experience" title="Experiencia"><i class="fas fa-briefcase"></i></a>
-            <a href="#skills" title="Skills"><i class="fas fa-code"></i></a>
-            <a href="#contact" title="Contacto"><i class="fas fa-envelope"></i></a>
+            <a href="#projects" title="Proyectos destacados"><i class="fas fa-laptop-code" aria-hidden="true"></i><span class="sr-only">Proyectos</span></a>
+            <a href="#experience" title="Experiencia laboral"><i class="fas fa-briefcase" aria-hidden="true"></i><span class="sr-only">Experiencia</span></a>
+            <a href="#skills" title="Habilidades técnicas"><i class="fas fa-code" aria-hidden="true"></i><span class="sr-only">Habilidades</span></a>
+            <a href="#contact" title="Contacto profesional"><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Contacto</span></a>
         </div>
     </nav>
+
     <!-- Header -->
-    <header class="hero content">
-        <h1>Agustin Aused</h1>
-        <h2>Software Engineer</h2>
-        <p>Apasionado de la tecnología, proactivo y siempre listo para nuevos desafíos.</p>
+    <header class="hero content" itemscope itemtype="http://schema.org/Person">
+        <h1 itemprop="name">Agustín Aused</h1>
+        <h2 itemprop="jobTitle">Software Engineer & Mainframe Specialist</h2>
+        <p itemprop="description">Desarrollador Full Stack con +2 años de experiencia en sistemas empresariales y desarrollo web con Java, React y tecnologías mainframe.</p>
     </header>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section" itemscope itemtype="http://schema.org/ItemList">
         <h2>Proyectos Destacados</h2>
         <div class="projects-container">
-            <div class="project-card">
-                <h3 class="project-title">LearnHub</h3>
-                <p class="project-description">Marketplace de servicios desarrollado con React y Node.js</p>
-                <button onclick="window.open('https://github.com/AgustinAused/LearnHub', '_blank')">Ver en GitHub</button>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title">Finance Api</h3>
-                <p class="project-description">Backend de una API REST para gestión de finanzas Empresariales</p>
-                <button onclick="window.open('https://github.com/AgustinAused/Finance-Api', '_blank')">Ver en GitHub</button>
-            </div>
+            <article class="project-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/SoftwareApplication">
+                <h3 class="project-title" itemprop="name">LearnHub</h3>
+                <p class="project-description" itemprop="description">Marketplace educativo desarrollado con React y Node.js utilizando arquitectura microservicios</p>
+                <meta itemprop="applicationCategory" content="Educational">
+                <meta itemprop="operatingSystem" content="Web">
+                <button onclick="window.open('https://github.com/AgustinAused/LearnHub', '_blank')" aria-label="Ver proyecto LearnHub en GitHub">Ver en GitHub</button>
+            </article>
+            
+            <article class="project-card" itemprop="itemListElement" itemscope itemtype="http://schema.org/SoftwareApplication">
+                <h3 class="project-title" itemprop="name">Finance API</h3>
+                <p class="project-description" itemprop="description">Sistema backend para gestión financiera empresarial con Spring Boot y MongoDB</p>
+                <meta itemprop="applicationCategory" content="Finance">
+                <button onclick="window.open('https://github.com/AgustinAused/Finance-Api', '_blank')" aria-label="Ver proyecto Finance API en GitHub">Ver en GitHub</button>
+            </article>
+        <!-- </div>
             <div class="project-card">
                 <h3 class="project-title">Finance Dashboard</h3>
                 <p class="project-description">Dashboard de finanzas desarrollado con React y NextJS</p>
                 <button onclick="window.open('https://github.com/AgustinAused/finance-dashboard', '_blank')">Ver en GitHub</button>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- Timeline Section -->
     <section id="experience">
@@ -168,19 +185,32 @@
         <p>&copy; 2025 Agustín - Todos los derechos reservados</p>
     </div>
     <script src="script.js"></script>
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Agustín Aused",
-          "jobTitle": "Software Engineer",
-          "url": "https://agusaused.com",
-          "sameAs": [
+   <!-- Structured Data -->
+   <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Agustín Aused",
+        "jobTitle": "Software Engineer",
+        "url": "https://agusaused.com",
+        "sameAs": [
             "https://www.linkedin.com/in/agustinaused",
             "https://github.com/AgustinAused"
-          ]
-        }
-        </script>
+        ],
+        "description": "Desarrollador Full Stack especializado en Java y tecnologías modernas con experiencia en sistemas mainframe",
+        "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "skills": ["Java", "React", "Spring Boot", "Mainframe", "MongoDB"]
+        },
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "Galicia Mas",
+                "description": "Empresa líder en servicios financieros"
+            }
+        ]
+    }
+    </script>
 </body>
-
 </html>
