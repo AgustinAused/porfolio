@@ -70,9 +70,9 @@ export default function Hero() {
         {/* Título principal */}
         <motion.h1
           variants={itemPop}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 pb-3"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-12 pb-2 text-transparent"
         >
-          <span className="block bg-gradient-to-r from-purple-300 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-purple-300 via-pink-400 to-purple-600 bg-clip-text text-transparent leading-[1.2]">
             Agustín Aused
           </span>
         </motion.h1>
@@ -80,7 +80,7 @@ export default function Hero() {
         {/* Subtítulo con mejor espaciado */}
         <motion.div
           variants={itemUp}
-          className="mb-10 space-y-4"
+          className="mb-8 space-y-4"
         >
           <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
             Tecnología. Estrategia. Transformación.
