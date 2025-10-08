@@ -19,6 +19,7 @@ const projects = [
       { icon: Database, label: "Tests", value: "+120" },
       { icon: Star, label: "Arqui.", value: "Micro" },
     ],
+    image: "/img/LearnHub-min.png",
   },
   {
     title: "Finance API",
@@ -124,8 +125,8 @@ export default function Projects() {
 
                 {/* Image Section */}
                 <div className="relative h-48 bg-slate-800/50 overflow-hidden">
-                  {project.image ? (
-                    <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  {(project as any).image ? (
+                    <Image src={(project as any).image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                   ) : (
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 flex items-center justify-center`}>
                       <Code2 className="w-16 h-16 text-white/40" />
