@@ -20,6 +20,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 2rem; /* Offset para evitar que el navbar tape el contenido */
 }
 
 body {
@@ -45,6 +46,54 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #9333ea, #db2777);
+}
+
+/* Margen para el navbar lateral (solo en desktop) */
+.section-navbar-offset {
+  margin-left: 0;
+  padding-bottom: 5rem; /* Espacio para el dock en mobile */
+}
+
+@media (min-width: 768px) {
+  .section-navbar-offset {
+    margin-left: 7rem; /* 112px - ancho del navbar mejorado */
+    padding-bottom: 0;
+  }
+}
+
+/* Smooth scroll para todos los elementos */
+* {
+  scroll-margin-top: 2rem;
+}
+
+/* Asegurar que las secciones tengan altura mínima */
+section {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Transiciones suaves entre secciones */
+section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, transparent, black);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+section:last-of-type::after {
+  display: none;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+section > * {
+  position: relative;
+  z-index: 10;
 }
 
 /* Selection */

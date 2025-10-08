@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import SectionBackground from './SectionBackground';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -31,8 +32,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" ref={ref} className="min-h-screen flex items-center justify-center px-4 py-20 ml-20">
-      <div className="max-w-4xl mx-auto w-full text-center">
+    <section id="contact" ref={ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 section-navbar-offset">
+      <SectionBackground variant="pink" intensity="high" />
+      
+      <div className="max-w-4xl mx-auto w-full text-center relative z-10">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mb-8"
           initial={{ opacity: 0, y: 50 }}

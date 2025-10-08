@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionBackground from './SectionBackground';
 import { 
   SiJavascript, SiTypescript, SiReact, SiNextdotjs, SiNodedotjs,
   SiSpring, SiPython, SiMongodb, SiMysql, SiPostgresql,
@@ -55,8 +56,10 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="skills" ref={ref} className="min-h-screen flex items-center justify-center px-4 py-20 ml-20">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="skills" ref={ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 section-navbar-offset">
+      <SectionBackground variant="purple" intensity="medium" />
+      
+      <div className="max-w-6xl mx-auto w-full relative z-10">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mb-16 text-center"
           initial={{ opacity: 0, y: 50 }}

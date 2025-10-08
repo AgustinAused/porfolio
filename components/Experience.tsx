@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionBackground from './SectionBackground';
 
 const experiences = [
   {
@@ -36,8 +37,10 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="experience" ref={ref} className="min-h-screen flex items-center justify-center px-4 py-20 ml-20">
-      <div className="max-w-5xl mx-auto w-full">
+    <section id="experience" ref={ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 section-navbar-offset">
+      <SectionBackground variant="blue" intensity="medium" />
+      
+      <div className="max-w-5xl mx-auto w-full relative z-10">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-white mb-16 text-center"
           initial={{ opacity: 0, y: 50 }}

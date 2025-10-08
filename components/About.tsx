@@ -3,14 +3,17 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionBackground from './SectionBackground';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="about" ref={ref} className="min-h-screen flex items-center justify-center px-4 ml-20">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" ref={ref} className="relative min-h-screen flex items-center justify-center px-6 py-24 section-navbar-offset">
+      <SectionBackground variant="purple" intensity="medium" />
+      
+      <div className="max-w-5xl mx-auto w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
