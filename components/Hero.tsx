@@ -70,13 +70,12 @@ export default function Hero() {
         {/* Título principal */}
         <motion.h1
           variants={itemPop}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-12 pb-2 text-transparent"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-12 leading-[1.25]"
         >
-          <span className="block bg-gradient-to-r from-purple-300 via-pink-400 to-purple-600 bg-clip-text text-transparent leading-[1.2]">
+          <span className="block bg-gradient-to-r from-purple-300 via-pink-400 to-purple-600 bg-clip-text text-transparent">
             Agustín Aused
           </span>
         </motion.h1>
-
         {/* Subtítulo con mejor espaciado */}
         <motion.div
           variants={itemUp}
