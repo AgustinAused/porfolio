@@ -70,7 +70,7 @@ export default function Hero() {
         {/* Título principal */}
         <motion.h1
           variants={itemPop}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 pb-3"
         >
           <span className="block bg-gradient-to-r from-purple-300 via-pink-400 to-purple-600 bg-clip-text text-transparent">
             Agustín Aused
