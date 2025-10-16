@@ -100,13 +100,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <head>
+        {/* Plausible (terceros). Si vas a usar proxy, cambiá src a /js/script.js (ver sección 2). */}
+        <Script
+          src="/js/script.js"
+          data-domain="agusaused.com"
+          data-api="/api/event"
+          strategy="afterInteractive"
+        />
+
         {/* JSON-LD para rich results */}
         <Script
           id="ld-person"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
