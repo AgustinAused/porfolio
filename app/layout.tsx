@@ -103,9 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Plausible (terceros). Si vas a usar proxy, cambiá src a /js/script.js (ver sección 2). */}
         <Script
-          src="/js/script.js"
+          src="https://plausible.io/js/script.js"
           data-domain="agusaused.com"
-          data-api="/api/event"
           strategy="afterInteractive"
         />
 
