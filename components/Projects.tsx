@@ -7,21 +7,6 @@ import SectionBackground from "./SectionBackground";
 
 const projects = [
   {
-    title: "FixBee",
-    description:
-      "SaaS para talleres de reparación de electrónica en LATAM. Gestión de órdenes, clientes, inventario y diagnósticos con IA. Construido desde cero con mi co-founder en Beescend.",
-    technologies: ["Next.js", "FastAPI", "PostgreSQL", "Microservicios", "AI"],
-    live: "https://app.beescend.com",
-    github: null,
-    status: "live",
-    gradient: "from-yellow-500 to-orange-500",
-    stats: [
-      { icon: Globe, label: "Mercado", value: "LATAM" },
-      { icon: Layers, label: "Arqui.", value: "Micro" },
-      { icon: Zap, label: "AI", value: "✓" },
-    ],
-  },
-  {
     title: "propuesta.lat",
     description:
       "Micro SaaS para generar propuestas comerciales personalizadas. Pensado para freelancers y agencias en LATAM que necesitan cerrar clientes más rápido.",

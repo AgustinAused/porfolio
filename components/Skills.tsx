@@ -31,7 +31,7 @@ const skillCategories = [
   },
   {
     title: 'Backend & APIs',
-    subtitle: 'Stack de Beescend',
+    subtitle: 'Stack principal',
     icon: FaServer,
     skills: [
       { name: 'FastAPI', icon: SiFastapi, color: 'text-green-400' },

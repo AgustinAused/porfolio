@@ -39,18 +39,7 @@ const About = () => {
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              Fuera del banco, co-fundé{" "}
-              <a
-                href="https://beescend.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-purple-300 hover:text-purple-200 transition-colors underline underline-offset-4 decoration-purple-500/40"
-              >
-                Beescend
-              </a>{" "}
-              y estoy construyendo{" "}
-              <strong className="text-purple-400">FixBee</strong> — un SaaS para talleres de
-              reparación de electrónica en LATAM. También tengo{" "}
+              Fuera del banco, construyo productos digitales. Tengo{" "}
               <a
                 href="https://propuesta.lat"
                 target="_blank"
@@ -59,7 +48,7 @@ const About = () => {
               >
                 propuesta.lat
               </a>
-              , una micro SaaS para generar propuestas comerciales personalizadas.
+              , una micro SaaS para generar propuestas comerciales personalizadas para freelancers y agencias en LATAM.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
